@@ -5,6 +5,8 @@ import {
   FlatList,
   TouchableOpacity,
   Pressable,
+  StatusBar,
+  Image,
 } from 'react-native';
 import React from 'react';
 import IconMenu from '../components/IconMenu';
@@ -19,16 +21,16 @@ const Data = [
 
 const Home = ({navigation}) => {
   return (
-    <View>
+    <View backgroundColor="pink">
       <FlatList
         data={Data}
         renderItem={({item}) => <IconMenu label={item.label} />}
         horizontal={true}
       />
       <TouchableOpacity
-        onPress={() => navigation.navigate('About')}
+        onPress={() => navigation.navigate('Search')}
         style={styles.btn}>
-        <Text style={styles.txt}>Ke About</Text>
+        <Text style={styles.txt}>PROFILE</Text>
       </TouchableOpacity>
     </View>
   );

@@ -5,7 +5,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Home from './screens/Home';
-import About from './screens/About';
+import Search from './screens/Search';
+import Add from './screens/Add';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -14,7 +15,7 @@ const MenuTab = () => {
   return (
     <Tabs.Navigator screenOptions={{tabBarActiveTintColor: 'green'}}>
       <Tabs.Screen
-        name="Home"
+        name="Home" 
         component={Home}
         options={{
           tabBarIcon: ({size, color}) => (
@@ -23,11 +24,20 @@ const MenuTab = () => {
         }}
       />
       <Tabs.Screen
-        name="About"
-        component={About}
+        name="Search"
+        component={Search}
         options={{
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="cog" size={size} color={color} />
+            <MaterialCommunityIcons name="search" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Add"
+        component={Add}
+        options={{
+          tabBarIcon: ({size, color}) => (
+            <MaterialCommunityIcons name="add" size={size} color={color} />
           ),
         }}
       />
