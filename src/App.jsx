@@ -5,8 +5,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Home from './screens/Home';
-import Search from './screens/Search';
-import Add from './screens/Add';
+import Profile from './screens/Profile';
+import Message from './screens/Message';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -15,7 +15,8 @@ const MenuTab = () => {
   return (
     <Tabs.Navigator screenOptions={{tabBarActiveTintColor: 'green'}}>
       <Tabs.Screen
-        name="Home" 
+        name="Instagram"
+        style-text="Roman" 
         component={Home}
         options={{
           tabBarIcon: ({size, color}) => (
@@ -24,20 +25,20 @@ const MenuTab = () => {
         }}
       />
       <Tabs.Screen
-        name="Search"
-        component={Search}
+        name="profile"
+        component={Profile}
         options={{
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="search" size={size} color={color} />
+            <MaterialCommunityIcons name="account-box" size={size} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="Add"
-        component={Add}
+        name="Message"
+        component={Message}
         options={{
           tabBarIcon: ({size, color}) => (
-            <MaterialCommunityIcons name="add" size={size} color={color} />
+            <MaterialCommunityIcons name="message" size={size} color={color} />
           ),
         }}
       />
