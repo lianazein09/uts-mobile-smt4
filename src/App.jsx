@@ -13,10 +13,10 @@ const Tabs = createBottomTabNavigator();
 
 const MenuTab = () => {
   return (
-    <Tabs.Navigator screenOptions={{tabBarActiveTintColor: 'green'}}>
+    <Tabs.Navigator screenOptions={{tabBarActiveTintColor: 'blue'}}>
       <Tabs.Screen
         name="Instagram"
-        style-text="Roman" 
+        style-text="" 
         component={Home}
         options={{
           tabBarIcon: ({size, color}) => (
@@ -25,7 +25,7 @@ const MenuTab = () => {
         }}
       />
       <Tabs.Screen
-        name="profile"
+        name="profil"
         component={Profile}
         options={{
           tabBarIcon: ({size, color}) => (
@@ -34,7 +34,7 @@ const MenuTab = () => {
         }}
       />
       <Tabs.Screen
-        name="Message"
+        name="Pesan"
         component={Message}
         options={{
           tabBarIcon: ({size, color}) => (

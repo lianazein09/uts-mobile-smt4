@@ -12,7 +12,8 @@ import React from 'react';
 import IconMenu from '../components/IconMenu';
 
 const Data = [
-  {id: 1, label: 'Liana Zein'},
+  {id: 1, label: 'Liana Zein grateful'},
+  
 ];
 
 const Profile = ({navigation}) => {
@@ -25,7 +26,7 @@ const Profile = ({navigation}) => {
       <TouchableOpacity
         onPress={() => navigation.navigate('Search')}
         style={styles.btn}>
-        <Text style={styles.txt}>PROFILE </Text>
+        <Text style={styles.txt}>PROFIL </Text>
       </TouchableOpacity>
 
     </View>
